@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FFDAB9;
+  
+}
+
+.navbar {
+  background-color: #ff7043 !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+  font-family: "Nunito", sans-serif;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+#inicio {
+  background-color: #ffe0b2;
+  font-family: "Nunito", sans-serif;
+}
+
+h1, h2 {
+  color: #bf360c;
+  font-family: "Nunito", sans-serif;
+}
+
+footer {
+  background-color: #6d4c41;
+}
+
+
+section, .container {
+  background-color: transparent;
+}
+
+
+.card, .list-group-item {
+  background-color: transparent;
+  border: none;
+}
+
+
+html, body {
+  height: 100%;
+}
+
