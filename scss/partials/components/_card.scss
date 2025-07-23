@@ -1,5 +1,5 @@
 @use "../utilitis/mixins";
-
+@use "../base/tipografia";
 .card-container {
     @include mixins.flex(row, center, center);
 
@@ -24,7 +24,7 @@
             display: inline-block;
             border-radius: 5px;
             background-color: #d88c51;
-            
+            font-family: 'Roboto', sans-serif;
         }
     }
 }

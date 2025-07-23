@@ -1,8 +1,9 @@
 @use "../utilitis/mixins";
+@use "../base/tipografia";
 
 .navbar {
     background-color:#d88c51;
-    padding: 12px;
+    padding: 10px;
     ul {
        @include mixins.flex(row, end, center);
         padding-right: 25px;
@@ -15,6 +16,7 @@
             a {
                 text-decoration: none;
                 color: black;
+                font-family: 'Poppins', sans-serif;
             }
         }
     }

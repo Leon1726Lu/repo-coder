@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ li {
 
 .navbar {
   background-color: #d88c51;
-  padding: 12px;
+  padding: 10px;
 }
 .navbar ul {
   display: flex;
@@ -34,6 +36,7 @@ li {
 .navbar ul li a {
   text-decoration: none;
   color: black;
+  font-family: "Poppins", sans-serif;
 }
 
 .confirm-button, .cancel-button, .contact-button {
@@ -53,29 +56,34 @@ h1 {
   font-size: 48px;
   text-align: center;
   margin-top: 10px;
+  font-family: "Playfair Display", serif;
 }
 
 h2 {
   color: rgb(0, 0, 0);
   text-align: center;
   margin-top: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 h4 {
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
 }
 
 h5 {
   margin: 12px 0;
   text-align: end;
   padding-right: 8px;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
   color: #1c6fcf;
   font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
 
 .contact-button {
@@ -116,6 +124,7 @@ p {
   display: inline-block;
   border-radius: 5px;
   background-color: #d88c51;
+  font-family: "Roboto", sans-serif;
 }
 
 .confirm-button {
