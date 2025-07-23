@@ -1,0 +1,14 @@
+@use "../utilitis/variables";
+
+footer {
+    background-color: #A0522D;
+    padding: 10px;
+    bottom: 0px;
+ 
+   
+    p {
+        font-size: variables.$p-size;
+        color: black;
+        text-align: center;
+    }
+}

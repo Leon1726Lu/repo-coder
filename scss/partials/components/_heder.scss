@@ -1,0 +1,21 @@
+@use "../utilitis/mixins";
+
+.navbar {
+    background-color: #D46A30;
+    padding: 12px;
+    ul {
+       @include mixins.flex(row, end, center);
+        padding-right: 25px;
+        gap: 32px;
+        font-size: 20px;
+        
+        li{
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}

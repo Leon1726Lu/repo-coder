@@ -1,0 +1,30 @@
+@use "../utilitis/mixins";
+
+.card-container {
+    @include mixins.flex(row, center, center);
+
+    .card {
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 250px;
+        height: 300px;
+        background-color: #fbd5a1;
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        p {
+           margin: 10px;
+           color: black;
+        }
+        .card-button {
+            padding: 8px;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: white;
+            
+        }
+    }
+}

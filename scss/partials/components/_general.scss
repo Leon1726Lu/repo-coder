@@ -1,0 +1,50 @@
+@use "../utilitis/variables";
+@use "../utilitis/extend";
+
+body{
+    background-color: #F0C08A;
+}
+
+h1 {
+    color: variables.$pure-black;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+h4 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h5{
+    margin: 12px 0;
+    text-align: end;
+    padding-right: 8px;
+}
+
+p {
+    color: variables.$p-gray;
+    font-size: variables.$p-size;
+}
+
+
+
+
+.contact-button {
+    @extend %button;
+    background-color: coral;
+
+
+    :hover {
+        background-color: rgb(169, 87, 33);
+    }
+}
