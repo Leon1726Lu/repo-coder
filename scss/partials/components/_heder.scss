@@ -2,7 +2,7 @@
 @use "../base/tipografia";
 
 .navbar {
-    background-color:#d88c51;
+    background-image: linear-gradient(to bottom, #d88c51, #d3a079);
     padding: 10px;
     ul {
        @include mixins.flex(row, end, center);
@@ -17,6 +17,10 @@
                 text-decoration: none;
                 color: black;
                 font-family: 'Poppins', sans-serif;
+                padding: 5px;
+                border: 3px solid beige;
+                display: inline-block;
+                border-radius: 8px;
             }
         }
     }

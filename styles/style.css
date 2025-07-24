@@ -15,7 +15,7 @@ li {
 }
 
 .navbar {
-  background-color: #d88c51;
+  background-image: linear-gradient(to bottom, #d88c51, #d3a079);
   padding: 10px;
 }
 .navbar ul {
@@ -37,14 +37,10 @@ li {
   text-decoration: none;
   color: black;
   font-family: "Poppins", sans-serif;
-}
-
-.confirm-button, .cancel-button, .contact-button {
+  padding: 5px;
+  border: 3px solid beige;
   display: inline-block;
-  text-decoration: none;
-  color: black;
   border-radius: 8px;
-  padding: 8px 16px;
 }
 
 body {
@@ -55,7 +51,7 @@ h1 {
   color: #000000;
   font-size: 48px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   font-family: "Playfair Display", serif;
 }
 
@@ -63,6 +59,7 @@ h2 {
   color: rgb(0, 0, 0);
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 25px;
   font-family: "Playfair Display", serif;
 }
 
@@ -86,13 +83,6 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-.contact-button {
-  background-color: coral;
-}
-.contact-button :hover {
-  background-color: rgb(169, 87, 33);
-}
-
 .card-container {
   display: flex;
   flex-direction: row;
@@ -107,7 +97,7 @@ p {
   border-radius: 5px;
   width: 250px;
   height: 300px;
-  background-color: #fef7f1;
+  background-image: linear-gradient(to bottom, rgb(190, 187, 187), #fef7f1);
 }
 .card-container .card img {
   width: 100%;
@@ -125,14 +115,6 @@ p {
   border-radius: 5px;
   background-color: #d88c51;
   font-family: "Roboto", sans-serif;
-}
-
-.confirm-button {
-  background-color: rgb(15, 140, 15);
-}
-
-.cancel-button {
-  background-color: rgb(192, 184, 25);
 }
 
 footer {
