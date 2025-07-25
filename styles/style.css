@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,16 @@ li {
 .navbar {
   background-image: linear-gradient(to bottom, #d88c51, #d3a079);
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 50px;
+  color: #ffffff;
+  margin-left: 25px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
 }
 .navbar ul {
   display: flex;
@@ -33,9 +44,8 @@ li {
 .navbar ul li {
   list-style-type: none;
 }
-.navbar ul li a {
-  text-decoration: none;
-  color: black;
+.navbar ul li .button-a, .navbar ul li .button-b, .navbar ul li .button-c {
+  color: beige;
   font-family: "Poppins", sans-serif;
   padding: 5px;
   border: 3px solid beige;
@@ -91,13 +101,16 @@ p {
   flex-wrap: wrap;
   gap: 80px;
   margin: 16px;
+  gap: 20px;
 }
 .card-container .card {
   border: 2px solid black;
   border-radius: 5px;
-  width: 250px;
+  min-width: 250px;
+  max-width: 300px;
+  width: 22%;
   height: 300px;
-  background-image: linear-gradient(to bottom, rgb(190, 187, 187), #fef7f1);
+  background-image: linear-gradient(to bottom, rgb(234, 223, 223), #fef7f1);
 }
 .card-container .card img {
   width: 100%;

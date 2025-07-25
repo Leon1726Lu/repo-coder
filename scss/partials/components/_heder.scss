@@ -4,6 +4,17 @@
 .navbar {
     background-image: linear-gradient(to bottom, #d88c51, #d3a079);
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo {   
+        font-size: 50px;
+        color: #ffffff;
+        margin-left: 25px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        }
     ul {
        @include mixins.flex(row, end, center);
         padding-right: 25px;
@@ -13,15 +24,15 @@
         li{
             list-style-type: none;
 
-            a {
-                text-decoration: none;
-                color: black;
+            .button-a, .button-b, .button-c {
+                color: beige;
                 font-family: 'Poppins', sans-serif;
                 padding: 5px;
                 border: 3px solid beige;
                 display: inline-block;
                 border-radius: 8px;
             }
+            
         }
     }
 }

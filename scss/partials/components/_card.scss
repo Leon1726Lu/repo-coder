@@ -2,13 +2,16 @@
 @use "../base/tipografia";
 .card-container {
     @include mixins.flex(row, center, center);
+    gap: 20px;
 
     .card {
         border: 2px solid black;
         border-radius: 5px;
-        width: 250px;
+        min-width: 250px;
+        max-width: 300px;
+        width: 22%;
         height: 300px;
-        background-image: linear-gradient(to bottom, rgb(190, 187, 187), #fef7f1);
+        background-image: linear-gradient(to bottom, rgb(234, 223, 223), #fef7f1);
         
         img {
             width: 100%;
