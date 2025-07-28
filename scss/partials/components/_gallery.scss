@@ -81,14 +81,14 @@
     align-items: center;
 
     .slider {
-      width: 90%; // Ocupa casi todo el ancho del móvil
+      width: 80%;
     }
 
     .cuadro {
       padding: 15px;
 
       img {
-        height: auto; // Se adapta al alto real
+        height: auto;
         max-height: 250px;
       }
 
