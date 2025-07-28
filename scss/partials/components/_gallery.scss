@@ -75,4 +75,36 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .galeria-css {
+    flex-direction: column;
+    align-items: center;
+
+    .slider {
+      width: 90%; // Ocupa casi todo el ancho del móvil
+    }
+
+    .cuadro {
+      padding: 15px;
+
+      img {
+        height: auto; // Se adapta al alto real
+        max-height: 250px;
+      }
+
+      .arrow {
+        font-size: 24px;
+        padding: 2px 10px;
+
+        &.left {
+          left: -30px;
+        }
+
+        &.right {
+          right: -30px;
+        }
+      }
+    }
+  }
+}
 
