@@ -53,6 +53,39 @@ li {
   border-radius: 8px;
 }
 
+.hamburguesa {
+  display: none;
+  font-size: 40px;
+  color: beige;
+  margin-right: 25px;
+  cursor: pointer;
+  border: 2px solid beige;
+  border-radius: 15px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+    gap: 15px;
+    padding: 20px 0;
+  }
+  .navbar #menu-toggle:checked + .hamburguesa + ul {
+    display: flex;
+  }
+  .navbar .hamburguesa {
+    display: block;
+  }
+}
 body {
   background-color: beige;
 }
