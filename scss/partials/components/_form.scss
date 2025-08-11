@@ -1,8 +1,5 @@
-// Código de scss/partials/components/_form.scss
-// (Copia y pega este código)
-
 @use "../utilitis/variables";
-@use "../utilitis/extend"; // Lo importamos para poder usarlo
+@use "../utilitis/extend"; 
 
 main {
   display: flex;
@@ -50,7 +47,7 @@ main {
     }
 
     button {
-      @include extend.button-base; // Aquí usamos @include
+      @include extend.button-base;
       background-color: variables.$dark-gray;
       color: variables.$light-color;
       border: 1px solid variables.$dark-gray;

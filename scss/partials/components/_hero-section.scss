@@ -2,13 +2,13 @@
 .hero-section {
     position: relative;
     display: flex;
-    justify-content: space-between; // Distribuye el espacio de manera uniforme
+    justify-content: space-between;
     align-items: center;
     min-height: 500px;
     padding: 50px 0;
     color: white;
     
-    background-image: url('../imagenes/imagen_nine.jpg'); // Asegúrate de que la ruta sea correcta
+    background-image: url('../imagenes/imagen_nine.jpg'); 
     background-color: #222;
     background-size: cover;
     background-position: center;
@@ -32,9 +32,8 @@
         justify-content: center;
         align-items: flex-start;
         padding-left: 50px;
-        flex: 1; // Permite que ocupe el espacio disponible
-        max-width: 50%; // Limita el ancho para dejar espacio a la imagen
-
+        flex: 1; 
+        max-width: 50%; 
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-size: 5rem;
@@ -49,7 +48,7 @@
         }
 
         .hero-button {
-         @include button-base; // <-- Aquí se usa el mixin
+         @include button-base; 
          border: 2px solid white;
           color: white;
           transition: background-color 0.3s, color 0.3s;
@@ -65,8 +64,8 @@
         position: relative;
         z-index: 2;
         padding-right: 50px;
-        flex: 1; // Permite que ocupe el espacio disponible
-        max-width: 50%; // Limita el ancho
+        flex: 1; 
+        max-width: 50%; 
         
         img {
             max-width: 100%;
