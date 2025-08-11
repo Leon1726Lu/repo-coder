@@ -1,58 +1,91 @@
 @use "../utilitis/mixins";
 @use "../base/tipografia";
+@use "../utilitis/variables";
 
 .navbar {
-    background-image: linear-gradient(to bottom, #d88c51, #d3a079);
-    padding: 10px;
+    background-color: variables.$dark-gray;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     
     .logo {   
         font-size: 50px;
-        color: #ffffff;
-        margin-left: 25px;
+        color: variables.$light-color;
         font-family: 'Dancing Script', cursive;
         font-weight: 700;
-        }
+    }
+    
     ul {
-       @include mixins.flex(row, end, center);
-        padding-right: 25px;
-        gap: 32px;
-        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 1rem;
         
-        li{
+        li {
             list-style-type: none;
 
             .button-a, .button-b, .button-c {
-                color: beige;
+                color: variables.$light-color;
                 font-family: 'Poppins', sans-serif;
-                padding: 5px;
-                border: 3px solid beige;
+                padding: 8px 15px;
+                border: 2px solid variables.$light-color;
                 display: inline-block;
-                border-radius: 8px;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: variables.$light-color;
+                    color: variables.$dark-gray;
+                }
             }
-            
+        }
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 50px; 
+        background-color: variables.$light-color;
+        margin-right: 25px;
+
+        input {
+            border: none;
+            padding: 8px 15px;
+            outline: none;
+            font-size: 1rem;
+            border-radius: 50px 0 0 50px;
+        }
+
+        button {
+            border: none;
+            background: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            color: #555;
+            transition: color 0.3s;
+
+            &:hover {
+                color: variables.$primary-color;
+            }
         }
     }
 }
 
-
 .hamburguesa {
   display: none;
   font-size: 40px;
-  color: beige;
-  margin-right: 25px;
+  color: variables.$light-color;
   cursor: pointer;
-  border: 2px solid beige;
+  border: 2px solid variables.$light-color;
   border-radius: 15px;
+  margin-right: 25px;
 }
-
 
 #menu-toggle {
   display: none;
 }
-
 
 @media (max-width: 768px) {
   .navbar {
@@ -66,7 +99,6 @@
       gap: 15px;
       padding: 20px 0;
     }
-
  
     #menu-toggle:checked + .hamburguesa + ul {
       display: flex;
@@ -74,6 +106,18 @@
 
     .hamburguesa {
       display: block;
+    }
+
+    .search-container {
+      width: 90%;
+      margin: 10px auto;
+      justify-content: center;
+      border-radius: 50px;
+    }
+    
+    .search-container input {
+        width: 100%;
+        border-radius: 50px 0 0 50px;
     }
   }
 }

@@ -1,0 +1,102 @@
+@use "../utilitis/extend" as *;
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between; // Distribuye el espacio de manera uniforme
+    align-items: center;
+    min-height: 500px;
+    padding: 50px 0;
+    color: white;
+    
+    background-image: url('../imagenes/imagen_nine.jpg'); // Asegúrate de que la ruta sea correcta
+    background-color: #222;
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 50px;
+        flex: 1; // Permite que ocupe el espacio disponible
+        max-width: 50%; // Limita el ancho para dejar espacio a la imagen
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-button {
+         @include button-base; // <-- Aquí se usa el mixin
+         border: 2px solid white;
+          color: white;
+          transition: background-color 0.3s, color 0.3s;
+    
+         &:hover {
+           background-color: white;
+           color: #222;
+         }
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        z-index: 2;
+        padding-right: 50px;
+        flex: 1; // Permite que ocupe el espacio disponible
+        max-width: 50%; // Limita el ancho
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        
+        .hero-content {
+            align-items: center;
+            padding: 20px;
+
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        .hero-image {
+            padding: 20px;
+        }
+    }
+}

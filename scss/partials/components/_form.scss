@@ -1,3 +1,9 @@
+// Código de scss/partials/components/_form.scss
+// (Copia y pega este código)
+
+@use "../utilitis/variables";
+@use "../utilitis/extend"; // Lo importamos para poder usarlo
+
 main {
   display: flex;
   justify-content: center;
@@ -9,40 +15,54 @@ main {
 .contact-form {
   width: 100%;
   max-width: 500px;
-  padding: 2rem;
-  background-image: linear-gradient(to bottom, rgb(249, 221, 179), #fef7f1);
+  padding: 2.5rem;
+  background-color: variables.$light-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-
   
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+  }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 
     input,
     textarea {
       padding: 0.8rem;
       font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f7f7f7;
       outline: none;
       width: 100%;
       box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+
+      &:focus {
+        border-color: variables.$primary-color;
+      }
     }
 
     button {
+      @include extend.button-base; // Aquí usamos @include
+      background-color: variables.$dark-gray;
+      color: variables.$light-color;
+      border: 1px solid variables.$dark-gray;
       padding: 0.8rem;
       font-size: 1rem;
-      background-color: transparent;
-      border: 1px solid #000;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Poppins', sans-serif;
 
       &:hover {
-        background-color: #000;
-        color: #fff;
+        background-color: variables.$light-color;
+        color: variables.$dark-gray;
       }
     }
   }

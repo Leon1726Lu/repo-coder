@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgb(250, 190, 99), #fef7f1);
+    background-image: linear-gradient(to bottom, rgb(196, 196, 196), #cfcfcf);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -35,7 +35,7 @@
 
     .arrow {
       font-size: 30px;
-      background-color: rgb(250, 190, 99);
+      background-color: rgb(0, 0, 0);
       color: rgb(255, 255, 255);
       padding: 2px 12px;
       border-radius: 50%;
@@ -55,7 +55,7 @@
       }
 
       &:hover {
-        background-color: #d16c3d;
+        background-color: #c2c2c2;
       }
     }
   }

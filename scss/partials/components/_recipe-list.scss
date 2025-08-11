@@ -1,0 +1,85 @@
+@use "../utilitis/mixins";
+
+.recetas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.receta-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .receta-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin: 0;
+            color: #222;
+            text-align: left;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            margin: 5px 0 10px;
+            color: #555;
+            text-align: left;
+        }
+
+        .receta-button {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: #d88c51;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            align-self: flex-start;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .recetas-list {
+        grid-template-columns: 1fr; /* Stack into a single column */
+    }
+
+    .receta-item {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .receta-info {
+            padding: 20px;
+            
+            h4, p, .receta-button {
+                text-align: center;
+                align-self: auto;
+            }
+        }
+    }
+}

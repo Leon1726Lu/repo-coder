@@ -2,11 +2,17 @@
 @use "../utilitis/extend";
 @use "../base/tipografia";
 
-body{
-    background-color: beige;
+body {
+    background-color: variables.$p-gray;
 }
 
-h1 {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, .galeria_intro {
     color: variables.$pure-black;
     font-size: 48px;
     text-align: center;
@@ -15,7 +21,7 @@ h1 {
 }
 
 h2 {
-    color: rgb(0, 0, 0);
+    color: variables.$dark-gray;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -29,7 +35,7 @@ h4 {
     font-family: 'Roboto', sans-serif;
 }
 
-h5{
+h5 {
     margin: 12px 0;
     text-align: end;
     padding-right: 8px;
@@ -37,18 +43,7 @@ h5{
 }
 
 p {
-    color: variables.$p-gray;
+    color: #555;
     font-size: variables.$p-size;
     font-family: 'Roboto', sans-serif;
 }
-
-.galeria_intro {
-    color: variables.$pure-black;
-    font-size: 48px;
-    text-align: center;
-    margin-top: 15px;
-    font-family: 'Playfair Display', serif;
-}
-
-
-
