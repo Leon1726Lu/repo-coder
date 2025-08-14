@@ -12,38 +12,31 @@
     
   <header>
    <nav class="navbar animate__animated animate__fadeInDown"> 
-        <li>
-          <a class="logo">Cocina Rica</a>
-        </li>
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburguesa">&#9776;</label>
+    <a class="logo" href="../index.html">Cocina Rica</a>
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburguesa" aria-label="Abrir menú">&#9776;</label>
+
     <ul>
-        <li>
-          <a class="button-a" href="../index.html">Inicio</a>
-        </li>
-        <li>
-          <a class="button-b" href="#">Recetas</a>
-        </li>
-        <li>
-          <a class="button-b" href="./meal-plans.html">Planes de Comida</a>
-        </li>
-        <li>
-          <a class="button-b" href="./ingredients.html">Ingredientes</a>
-        </li>
-        <li>
-          <a class="button-c" href="./contacto.html">Contacto</a>
-        </li>
-      </ul>
-      <div class="search-container">
-        <input type="text" placeholder="Search...">
-        <button type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-        </button>
-      </div>
-    </nav>
+      <li><a class="button-a" href="../index.html">Inicio</a></li>
+      <li><a class="button-b" href="#">Recetas</a></li>
+      <li><a class="button-b" href="./meal-plans.html">Planes de Comida</a></li>
+      <li><a class="button-b" href="./ingredients.html">Ingredientes</a></li>
+      <li><a class="button-c" href="./recetas.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-container">
+      <input type="text" placeholder="Buscar..." aria-label="Buscar recetas">
+      <button type="submit" aria-label="Buscar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
   </header>
    
   <main>
@@ -150,7 +143,7 @@
     <p>
       <strong>Pagina coder</strong> © <strong>recetascoder</strong> 2025 |
       <a href="#">Quiénes somos</a> |
-      <a href="./secciones/contacto.html">Contacta con nosotros</a> |
+      <a href="./pages/contacto.html">Contacta con nosotros</a> |
       <a href="#">Términos y Condiciones</a> |
       <a href="#">Política de privacidad</a> |
       <a href="#">Política de cookies</a>
