@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comunidad de Cocina Rica: comparte tus recetas, da me gusta y comenta los platos de otros cocineros.">
+  <!-- ANIMATE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <title>Pagina coder - Comunidad</title>
+</head>
+<body>
+
+  <header>
+   <nav class="navbar animate__animated animate__fadeInDown">
+    <a class="logo" href="../index.html">Cocina Rica</a>
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburguesa" aria-label="Abrir menú">&#9776;</label>
+
+    <ul>
+      <li><a class="button-a" href="../index.html">Inicio</a></li>
+      <li><a class="button-b" href="./recetas.html">Recetas</a></li>
+      <li><a class="button-b" href="./meal-plans.html">Planes de Comida</a></li>
+      <li><a class="button-b" href="./ingredients.html">Ingredientes</a></li>
+      <li><a class="button-b" href="#">Comunidad</a></li>
+      <li><a class="button-c" href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-container">
+      <input type="text" id="buscador" placeholder="Buscar en la comunidad..." aria-label="Buscar publicaciones">
+      <button type="button" aria-label="Buscar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  </header>
+
+  <main class="comunidad">
+    <p class="galeria_intro animate__animated animate__fadeInDown">Comunidad</p>
+
+    <div class="comunidad-layout">
+
+      <!-- Lateral izquierdo: perfil y filtros -->
+      <aside class="lateral lateral-izq">
+        <section class="panel perfil">
+          <div class="avatar grande" id="perfil-avatar">TÚ</div>
+          <p class="perfil-nombre" id="perfil-nombre">Invitado</p>
+          <button type="button" class="btn-publicar" id="cambiar-nombre" style="margin-top:.6rem;font-size:.8rem">Cambiar nombre</button>
+          <div class="perfil-stats">
+            <div><strong id="stat-posts">0</strong>Recetas</div>
+            <div><strong id="stat-likes">0</strong>Me gusta</div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Explorar</h3>
+          <nav class="filtros" id="filtros" aria-label="Filtrar publicaciones">
+            <button type="button" class="activo" data-filtro="todas">Todas</button>
+            <button type="button" data-filtro="Plato principal">Platos principales</button>
+            <button type="button" data-filtro="Postre">Postres</button>
+            <button type="button" data-filtro="Entrada">Entradas</button>
+            <button type="button" data-filtro="Vegano">Vegano</button>
+            <button type="button" data-filtro="mias">Mis publicaciones</button>
+          </nav>
+        </section>
+      </aside>
+
+      <!-- Centro: crear publicación + muro -->
+      <section class="muro">
+        <form class="panel composer" id="composer">
+          <div class="composer-fila">
+            <div class="avatar" id="composer-avatar">TÚ</div>
+            <div class="composer-campos">
+              <input type="text" id="post-titulo" placeholder="Nombre de tu receta" maxlength="80" required>
+              <textarea id="post-texto" rows="3" placeholder="¿Qué cocinaste hoy? Cuéntanos ingredientes y pasos..." maxlength="1000"></textarea>
+            </div>
+          </div>
+          <div class="preview" id="preview" hidden>
+            <img id="preview-img" alt="Vista previa de la imagen">
+            <button type="button" id="quitar-imagen" aria-label="Quitar imagen">✕</button>
+          </div>
+          <div class="composer-acciones">
+            <label class="adjuntar">📷 Agregar foto
+              <input type="file" id="post-imagen" accept="image/*">
+            </label>
+            <select id="post-categoria" aria-label="Categoría">
+              <option>Plato principal</option>
+              <option>Entrada</option>
+              <option>Postre</option>
+              <option>Vegano</option>
+            </select>
+            <button type="submit" class="btn-publicar" id="btn-publicar" disabled>Publicar</button>
+          </div>
+        </form>
+
+        <div id="feed" aria-live="polite"></div>
+      </section>
+
+      <!-- Lateral derecho: sugeridos y tendencias -->
+      <aside class="lateral lateral-der">
+        <section class="panel">
+          <h3>Cocineros sugeridos</h3>
+          <ul class="sugeridos" id="sugeridos"></ul>
+        </section>
+        <section class="panel">
+          <h3>Tendencias</h3>
+          <ul class="tendencias" id="tendencias"></ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+  <section class="footer-top">
+    <h1><img src="../imagenes/kindpng_833474.png" alt="Logo"> Cocina Rica</h1>
+    <p>Redes sociales</p>
+    <div class="social-icons">
+      <a href="#"><img src="../imagenes/Facebook.webp" alt="Facebook"></a>
+      <a href="#"><img src="../imagenes/x.webp" alt="Twitter"></a>
+      <a href="#"><img src="../imagenes/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../imagenes/Youtube.jpeg" alt="YouTube"></a>
+      <a href="#"><img src="../imagenes/Pinteres.png" alt="Pinterest"></a>
+      <a href="#"><img src="../imagenes/tiktok.png" alt="TikTok"></a>
+    </div>
+  </section>
+
+  <section class="footer-bottom">
+    <p>
+      <strong>Pagina coder</strong> © <strong>recetascoder</strong> 2025 |
+      <a href="#">Quiénes somos</a> |
+      <a href="./contacto.html">Contacta con nosotros</a> |
+      <a href="#">Términos y Condiciones</a> |
+      <a href="#">Política de privacidad</a> |
+      <a href="#">Política de cookies</a>
+    </p>
+  </section>
+  </footer>
+
+  <script src="../scripts/comunidad.js"></script>
+</body>
+</html>

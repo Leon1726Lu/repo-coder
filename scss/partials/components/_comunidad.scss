@@ -1,0 +1,449 @@
+@use "../utilitis/variables";
+@use "../utilitis/extend";
+
+// ===== Comunidad (muro estilo red social) =====
+$borde: #e6e1dc;
+$texto-suave: #6b6b6b;
+
+main.comunidad {
+  display: block;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.comunidad-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 600px) 260px;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: start;
+  font-family: "Roboto", sans-serif;
+  color: variables.$dark-gray;
+}
+
+.panel {
+  background-color: variables.$light-color;
+  border: 1px solid $borde;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.lateral {
+  position: sticky;
+  top: 1rem;
+}
+
+// ---- Perfil ----
+.perfil {
+  text-align: center;
+
+  .avatar {
+    margin: 0 auto 0.6rem;
+  }
+
+  .perfil-nombre {
+    font-size: 1.1rem;
+    color: variables.$dark-gray;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+  .perfil-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: $texto-suave;
+
+    strong {
+      display: block;
+      font-size: 1.1rem;
+      color: variables.$dark-gray;
+    }
+  }
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: variables.$light-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: variables.$primary-color;
+
+  &.grande {
+    width: 72px;
+    height: 72px;
+    font-size: 1.6rem;
+  }
+}
+
+.filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  button {
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+    color: variables.$dark-gray;
+
+    &:hover {
+      background-color: #f4efea;
+    }
+
+    &.activo {
+      background-color: #f8e6d7;
+      color: #a85a1e;
+      font-weight: 500;
+    }
+  }
+}
+
+// ---- Composer ----
+.composer {
+  .composer-fila {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $borde;
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+    font: inherit;
+    background-color: #faf8f6;
+    outline: none;
+    resize: vertical;
+
+    &:focus {
+      border-color: variables.$primary-color;
+      background-color: variables.$light-color;
+    }
+  }
+
+  .composer-campos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .composer-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid $borde;
+  }
+
+  select {
+    border: 1px solid $borde;
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    font: inherit;
+    background-color: variables.$light-color;
+  }
+
+  .adjuntar {
+    cursor: pointer;
+    color: $texto-suave;
+    font-size: 0.9rem;
+
+    input {
+      display: none;
+    }
+
+    &:hover {
+      color: variables.$dark-gray;
+    }
+  }
+
+  .preview {
+    position: relative;
+    margin-top: 0.6rem;
+
+    img {
+      width: 100%;
+      max-height: 260px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    button {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: variables.$light-color;
+    }
+  }
+}
+
+.btn-publicar {
+  @include extend.button-base;
+  background-color: variables.$dark-gray;
+  color: variables.$light-color;
+  border: 1px solid variables.$dark-gray;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover:not(:disabled) {
+    background-color: variables.$light-color;
+    color: variables.$dark-gray;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+// ---- Publicaciones ----
+.post {
+  padding: 0;
+  overflow: hidden;
+
+  .post-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 1.2rem 0.6rem;
+  }
+
+  .post-autor {
+    font-weight: 500;
+  }
+
+  .post-meta {
+    font-size: 0.8rem;
+    color: $texto-suave;
+  }
+
+  .etiqueta {
+    margin-left: auto;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background-color: #f8e6d7;
+    color: #a85a1e;
+  }
+
+  .post-titulo {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0 1.2rem;
+    margin: 0.2rem 0 0.3rem;
+  }
+
+  .post-texto {
+    padding: 0 1.2rem 0.8rem;
+    font-size: 0.95rem;
+    color: variables.$dark-gray;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+
+  .post-imagen {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-contadores {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    color: $texto-suave;
+  }
+
+  .post-acciones {
+    display: flex;
+    border-top: 1px solid $borde;
+    border-bottom: 1px solid $borde;
+    margin: 0 1rem;
+
+    button {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: 0.6rem;
+      font: inherit;
+      color: $texto-suave;
+      cursor: pointer;
+      border-radius: 8px;
+      margin: 0.2rem 0;
+
+      &:hover {
+        background-color: #f4efea;
+      }
+
+      &.activo {
+        color: variables.$primary-color;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .comentarios {
+    padding: 0.8rem 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .comentario {
+    display: flex;
+    gap: 0.5rem;
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      font-size: 0.8rem;
+    }
+
+    .burbuja {
+      background-color: #f4efea;
+      border-radius: 14px;
+      padding: 0.45rem 0.8rem;
+      font-size: 0.9rem;
+
+      strong {
+        display: block;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .form-comentario {
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+      border: 1px solid $borde;
+      border-radius: 999px;
+      padding: 0.5rem 0.9rem;
+      font: inherit;
+      outline: none;
+      background-color: #faf8f6;
+
+      &:focus {
+        border-color: variables.$primary-color;
+      }
+    }
+  }
+}
+
+.vacio {
+  text-align: center;
+  font-size: 1rem;
+  color: $texto-suave;
+}
+
+// ---- Lateral derecho ----
+.sugeridos li,
+.tendencias li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+.sugeridos .avatar {
+  width: 34px;
+  height: 34px;
+  font-size: 0.85rem;
+}
+
+.sugeridos button {
+  margin-left: auto;
+  border: 1px solid variables.$dark-gray;
+  background: none;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  &.siguiendo {
+    background-color: variables.$dark-gray;
+    color: variables.$light-color;
+  }
+}
+
+.tendencias li {
+  justify-content: space-between;
+  color: $texto-suave;
+
+  span:first-child {
+    color: variables.$dark-gray;
+    font-weight: 500;
+  }
+}
+
+// ---- Responsive ----
+@media (max-width: 1100px) {
+  .comunidad-layout {
+    grid-template-columns: 240px minmax(0, 600px);
+  }
+
+  .lateral-der {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .comunidad-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lateral {
+    position: static;
+  }
+
+  .lateral-izq .perfil {
+    display: none;
+  }
+
+  .filtros {
+    flex-direction: row;
+    overflow-x: auto;
+
+    button {
+      white-space: nowrap;
+    }
+  }
+}
